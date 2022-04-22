@@ -17,7 +17,7 @@ describe("Unit test for Users class", () => {
 })
 
 describe("Unit test for Users class", () => {
-    test('Create an Users object', () => {
+    test('Add getters', () => {
         //Se invoca el código que se va a usar en el app
         const User2 = new User(1,"Jose Luis", "Jose", "Bio")
         //Aqui validas los resultados de ese código
@@ -27,5 +27,19 @@ describe("Unit test for Users class", () => {
         expect(User2.getDateCreated).not.toBeUndefined()
         expect(User2.getLastUptade).not.toBeUndefined()
     
+    })
+})
+
+describe("Unit test for Users class", () => {
+    test('Add setters', () => {
+        //Se invoca el código que se va a usar en el app
+        const User3 = new User(1,"Jose Luis", "Jose", "Bio")
+        //Aqui validas los resultados de ese código
+        //Esta es una comparacion que va a igualar el valor de la izquiere con el valor de la derecha (valor esperado)
+        User3.setUsername = "Jose Luis LM"
+        expect(User3.username).toBe("Jose Luis LM")
+
+        User3.setBio = "New Bio"
+        expect(User3.bio).toBe("New Bio")
     })
 })
