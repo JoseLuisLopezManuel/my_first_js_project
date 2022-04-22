@@ -5,10 +5,13 @@ class UserService{
         return new User(id, username,name,"Sin bio")
     }
     static getInfo(User){
-        return [User.ida,User.username,User.name, User.bio]
+        return [User.id,User.username,User.name, User.bio]
     }
     static updateUserUsername(User, newUsername){
         return User.username = newUsername
+    }
+    static getAllUsernames([user1, user2, user3]){
+        return [user1.username, user2.username, user3.username]
     }
 }
 module.exports= UserService
