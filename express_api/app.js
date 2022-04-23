@@ -36,8 +36,10 @@ app.get('/v1/explorers/:id',(req,res) => {
 
 app.post('/v1/explorers',(req, res) => {
     console.log(`Api Explorers POST reques ${new Date()}`)
+    //Agregar la lógica para persistir
     const requestBody = req.body //Parámetros de un cliente
-    res.status(200).json({message: "Created"})
+    console.log(req.body)
+    res.status(201).json({message: "Created"})
 })
 
 //Con esto inicializamos esta app
