@@ -34,6 +34,7 @@ app.get('/v1/explorers/:id',(req,res) => {
     res.status(200).json(explorers[0])
 })
 
+//Agregar
 app.post('/v1/explorers',(req, res) => {
     console.log(`Api Explorers POST reques ${new Date()}`)
     //Agregar la lógica para persistir
@@ -42,6 +43,13 @@ app.post('/v1/explorers',(req, res) => {
     res.status(201).json({message: "Created"})
 })
 
+app.put('/v1/explorers/:id', (req,res) =>{
+    console.log(`PUT Explorers VI API ${new Date()}`)
+    console.log(`Update explorer with id ${req.params.id}`)
+    //Agregar la lógica para actualizar
+    const requestBody = req.body //Párametros de un cliente
+    res.status(200).json({message:"Actualizado exitosamente"})
+})
 //Con esto inicializamos esta app
 app.listen(port, ()=>{
     console.log(`Example app listening on port ${port}`)
