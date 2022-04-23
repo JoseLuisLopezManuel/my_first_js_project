@@ -23,6 +23,7 @@ app.get('/v1/explorers',(req,res) => {
 
 app.get('/v1/explorers/:id',(req,res) => {
     console.log(`GET BY ID Explorers VI API ${new Date()}`)
+    console.log(`Getting explorer with id ${req.params.id}`)
     const explorer1= {id: 1, name: "Jose1"}
     const explorer2= {id: 2, name: "Jose2"}
     const explorer3= {id: 3, name: "Jose3"}
